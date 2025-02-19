@@ -1,8 +1,8 @@
 package application.controller;
 
-import java.ultil.Optional;
+import java.util.Optional;
 
-import org.springframework.bens.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +20,7 @@ public class CategoriaController{
 
     @RequestMapping("/list")
     public String list(Model ui){
-        ui.addAtributte("categorias", categoriaRepo.findAll());
+        ui.addAttribute("categorias", categoriaRepo.findAll());
         return "categoria/list";
     }
 
@@ -45,10 +45,10 @@ public class CategoriaController{
             Optional<Categoria> categoria = categoriaRepo.findById(id);
 
             if(categoria.isPresent()){
-                ui.addAtributte("categoria", categoria.get());
-                return "categoria/update"
+                ui.addAttribute("categoria", categoria.get());
+                return "categoria/update";
             }
-            return "redirect:/categoria/list"
+            return "redirect:/categoria/list";
         }
 
         @RequestMapping(value = "/update", method = RequestMethod.POST)
@@ -72,7 +72,7 @@ public class CategoriaController{
                 Optional<Categoria> categoria = categoriaRepo.findById(id);
 
                 if(categoria.isPresent()){
-                    ui.addAtributte("categoria", categoria.get());
+                    ui.addAttribute("categoria", categoria.get());
                     return "categoria/delete";
                 }
 
