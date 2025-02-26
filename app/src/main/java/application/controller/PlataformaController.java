@@ -29,7 +29,7 @@ public class PlataformaController {
         return "plataforma/insert";
     }
     @RequestMapping(value = "/insert", method = RequestMethod.POST) 
-    public String insert (@RequestParam("nome") string nome) { 
+    public String insert (@RequestParam("nome") String nome) { 
         Plataforma plataforma = new Plataforma(); 
         plataforma.setNome (nome);
 
