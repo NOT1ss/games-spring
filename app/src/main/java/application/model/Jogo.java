@@ -35,6 +35,10 @@ public class Jogo {
         inverseJoinColumns = @JoinColumn(name = "id_plataformas")) 
     private Set<Plataforma> plataformas = new HashSet<>();
 
+    public Set<Plataforma> getPlataformas() {
+        return plataformas;
+    }
+
     public long getId() {
         return id;
     }

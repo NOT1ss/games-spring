@@ -17,7 +17,7 @@ import jakarta.persistence.Table;
 @Table (name = "plataformas") 
 public class Plataforma {
     @Id
-    @GeneratedValue(strategy = GenerationType. IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(unique = true, nullable = false)
     private String nome;
@@ -29,7 +29,8 @@ public class Plataforma {
         return id;
     }
     
-    public void setId(long id) { this.id = id;
+    public void setId(long id) { 
+        this.id = id;
     }
     
     public String getNome() {

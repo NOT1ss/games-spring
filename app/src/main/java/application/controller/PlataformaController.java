@@ -33,16 +33,16 @@ public class PlataformaController {
         Plataforma plataforma = new Plataforma(); 
         plataforma.setNome (nome);
 
-    plataformaRepo.save(plataforma);
+        plataformaRepo.save(plataforma);
 
-    return "redirect:/plataforma/list";
+        return "redirect:/plataforma/list";
     }
 
     @RequestMapping("/update")
     public String update(
         @RequestParam("id") long id,
         Model ui) {
-            Optional<Plataforma> plataforma = plataformaRepo.findAll(id);
+            Optional<Plataforma> plataforma = plataformaRepo.findById(id);
 
             if(plataforma.isPresent()){
                 ui.addAttribute("plataforma", plataforma.get());
@@ -56,7 +56,7 @@ public class PlataformaController {
         public String update(
             @RequestParam("id") long id,
             @RequestParam("nome") String nome) {
-                Optional<Plataforma> plataforma = plataformaRepo.findAll(id);
+                Optional<Plataforma> plataforma = plataformaRepo.findById(id);
     
                 if(plataforma.isPresent()){
                     plataforma.get().setNome(nome);
@@ -69,7 +69,7 @@ public class PlataformaController {
         public String delete(
         @RequestParam("id") long id,
         Model ui) {
-            Optional<Plataforma> plataforma = plataformaRepo.findAll(id);
+            Optional<Plataforma> plataforma = plataformaRepo.findById(id);
 
             if(plataforma.isPresent()){
                 ui.addAttribute("plataforma", plataforma.get());
