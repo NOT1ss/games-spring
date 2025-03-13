@@ -14,7 +14,7 @@
             <input type="hidden" name="id" value="${jogo.id}" />
             
             <div class="form-group">
-                <label for="titulo">Título: </label>
+                <label for="titulo">Título:</label>
                 <input type="text" name="titulo" class="form-control" value="${jogo.titulo}" />
             </div>
             

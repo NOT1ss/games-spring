@@ -82,7 +82,7 @@ public class JogoController {
         @RequestParam("id") long id,
         @RequestParam("titulo") String titulo,
         @RequestParam("categoria") long idCategoria, 
-        @RequestParam("plataformas ") long[] idsPlataformas) {
+        @RequestParam("plataformas") long[] idsPlataformas) {
 
         Optional<Jogo> jogo = jogoRepo.findById(id);
 
