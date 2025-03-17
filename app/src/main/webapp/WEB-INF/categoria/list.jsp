@@ -14,6 +14,7 @@
             <div class="container">
                 <h1>Categorias</h1>
                 <a href="/categoria/insert" class="btn btn-primary">Nova Categoria</a>
+                <a href="https://8080-not1ss-gamesspring-cen4uqvr757.ws-us118.gitpod.io/" class="btn btn-primary">Voltar</a>
                 <table class="table">
                     <tr>
                         <th>Id</th>

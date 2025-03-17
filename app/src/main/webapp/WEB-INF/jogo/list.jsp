@@ -11,6 +11,7 @@
         <div class="container">
             <h1>Jogos</h1>
             <a href="/jogo/insert" class="btn btn-primary">Novo Jogo</a>
+            <a href="https://8080-not1ss-gamesspring-cen4uqvr757.ws-us118.gitpod.io/" class="btn btn-primary">Voltar</a>
             <table class="table">
                 <tr>
                     <th>Id</th>

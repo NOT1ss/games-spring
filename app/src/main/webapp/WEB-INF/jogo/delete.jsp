@@ -7,9 +7,11 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
+        
         <div class="container mt-5">
             <h1>Remover Jogo</h1>
             <p>Tem certeza que deseja remover o jogo <strong>${jogo.titulo}</strong>?</p>
+            
             <form action="/jogo/delete" method="post">
                 <input type="hidden" name="id" value="${jogo.id}" />
                 <br />
